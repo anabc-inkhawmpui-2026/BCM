@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BCM ABC</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+
+            
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 52px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+    padding: 8px 12px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    background: #173D32;
+}
+
+.navbar a {
+    flex-shrink: 0;
+    display: block;
+
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.navbar a:hover {
+    background: #315B4B;
+}
+
+.navbar a:hover {
+    background: #315B4B;
+}
+
+.programme {
+    padding: 28px 20px;
+    min-height: 350px;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 0px;
+}
+
+.programme h2 {
+    color: #173D32;
+}
+
+            .box-1 {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 380px;
+    padding: 24px;
+    margin: -10px auto;
+    border: 1px solid black;
+}
+
+            .logo {
+
+                
+                display:inline;
+                position: relative;
+
+                top:10px;
+                left:50px;
+
+                width:40px;
+                height:40px;
+            }
+
+           .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #173D32;
+}
+
+.nav-wrapper .navbar {
+    position: relative;
+    width: 100%;
+    padding: 8px 52px 8px 12px;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.nav-toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    padding-bottom: 4px;
+    padding-left: 7px;
+
+    background: white;
+    color: #173D32;
+    font-size: 27px;
+    line-height: 1;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-toggle:active {
+    background: #DDE8E1;
+}
+            
+        </style>
+
+    </head>
+    <body>
+        
+<div class="nav-wrapper">
+    <nav class="navbar" id="programmeNav">
+        <a href="#service1">Zirtawpni Zan</a>
+        <a href="#service2">Inrinni Chhun</a>
+        <a href="#service3">Inrinni Zan</a>
+        <a href="#service4">Pathianni Chhun</a>
+        <a href="#service5">Pathianni Zan</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle"
+            type="button" aria-label="Scroll navigation right">
+        ›
+    </button>
+</div>
+
+<section id="service1"
+         class="programme"
+         data-start="2026-10-23T18:00:00+05:30"
+         data-end="2026-10-23T21:00:00+05:30">
+     <div class="box-1">
+
+            <h4 style="display:inline;">AREA BAPTIST COUNCIL</h4><img src="images/Bcm_logo.png" alt="Church Logo" class="logo">
+            <h4>BCM CHALTLANG</h4>
+
+            <h5>PROGRAMME</h5>
+            <h5>26th November 2026</h5>
+            <p>Zirtawpni zan</p>
+            <p>Hruaitu: ....</p>
+            <p>Zaipawl-1</p>
+            <p>Zaipawl-2</p>
+            <p>Zaipawl-3</p>
+            <p>Thuchah sawitu.....</p>
+        </div>
+</section>
+
+<section id="service2"
+         class="programme"
+         data-start="2026-10-24T09:00:00+05:30"
+         data-end="2026-10-24T12:00:00+05:30">
+     <div class="box-1">
+
+            <h4 style="display:inline;">AREA BAPTIST COUNCIL</h4><img src="images/Bcm_logo.png" alt="Church Logo" class="logo">
+            <h4>BCM CHALTLANG</h4>
+
+            <h5>PROGRAMME</h5>
+            <h5>26th November 2026</h5>
+            <p>Inrinni chhun</p>
+            <p>Hruaitu: ....</p>
+            <p>Zaipawl-1</p>
+            <p>Zaipawl-2</p>
+            <p>Zaipawl-3</p>
+            <p>Thuchah sawitu.....</p>
+        </div>
+</section>
+
+<section id="service3"
+         class="programme"
+         data-start="2026-10-24T18:00:00+05:30"
+         data-end="2026-10-24T21:00:00+05:30">
+    <div class="box-1">
+
+            <h4 style="display:inline;">AREA BAPTIST COUNCIL</h4><img src="images/Bcm_logo.png" alt="Church Logo" class="logo">
+            <h4>BCM CHALTLANG</h4>
+
+            <h5>PROGRAMME</h5>
+            <h5>26th November 2026</h5>
+            <p>Inrinni zan</p>
+            <p>Hruaitu: ....</p>
+            <p>Zaipawl-1</p>
+            <p>Zaipawl-2</p>
+            <p>Zaipawl-3</p>
+            <p>Thuchah sawitu.....</p>
+        </div>
+</section>
+
+<section id="service4"
+         class="programme"
+         data-start="2026-10-24T09:00:00+05:30"
+         data-end="2026-10-24T12:00:00+05:30">
+     <div class="box-1">
+
+            <h4 style="display:inline;">AREA BAPTIST COUNCIL</h4><img src="images/Bcm_logo.png" alt="Church Logo" class="logo">
+            <h4>BCM CHALTLANG</h4>
+
+            <h5>PROGRAMME</h5>
+            <h5>26th November 2026</h5>
+            <p>Pathianni chhun</p>
+            <p>Hruaitu: ....</p>
+            <p>Zaipawl-1</p>
+            <p>Zaipawl-2</p>
+            <p>Zaipawl-3</p>
+            <p>Thuchah sawitu.....</p>
+        </div>
+</section>
+
+<section id="service5"
+         class="programme"
+         data-start="2026-10-24T18:00:00+05:30"
+         data-end="2026-10-24T21:00:00+05:30">
+    <div class="box-1">
+
+            <h4 style="display:inline;">AREA BAPTIST COUNCIL</h4><img src="images/Bcm_logo.png" alt="Church Logo" class="logo">
+            <h4>BCM CHALTLANG</h4>
+
+            <h5>PROGRAMME</h5>
+            <h5>26th November 2026</h5>
+            <p>Pathianni zan</p>
+            <p>Hruaitu: ....</p>
+            <p>Zaipawl-1</p>
+            <p>Zaipawl-2</p>
+            <p>Zaipawl-3</p>
+            <p>Thuchah sawitu.....</p>
+        </div>
+</section>
+
+
+    
+    <script>
+        
+const nav = document.getElementById("programmeNav");
+const toggle = document.getElementById("navToggle");
+
+function updateToggle() {
+    const maxScroll = nav.scrollWidth - nav.clientWidth;
+    const atEnd = nav.scrollLeft >= maxScroll - 5;
+    const atStart = nav.scrollLeft <= 5;
+
+    toggle.textContent = atEnd ? "‹" : "›";
+    toggle.setAttribute(
+        "aria-label",
+        atEnd ? "Scroll navigation left" : "Scroll navigation right"
+    );
+
+    // Hide the button if all tabs already fit
+    toggle.style.display =
+        maxScroll <= 5 || (atStart && atEnd) ? "none" : "flex";
+}
+
+toggle.addEventListener("click", () => {
+    const maxScroll = nav.scrollWidth - nav.clientWidth;
+    const atEnd = nav.scrollLeft >= maxScroll - 5;
+
+    nav.scrollBy({
+        left: atEnd ? -nav.clientWidth * 0.65 : nav.clientWidth * 0.65,
+        behavior: "smooth"
+    });
+});
+
+nav.addEventListener("scroll", updateToggle);
+window.addEventListener("resize", updateToggle);
+
+updateToggle();
+
+        </script>
+        </body>
+</html>
