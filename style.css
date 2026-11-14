@@ -1,0 +1,171 @@
+
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #F4F6F3;
+    
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: white;
+    border-bottom: 1px solid #E5E9E5;
+}
+
+.header img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.header-text h3 {
+    font-size: 14px;
+    color: #2b6db8;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 12px;
+    color: #2a6ebc;
+    margin: 4px 0 5px;
+}
+
+/* HERO */
+
+.hero {
+    margin: 20px;
+    padding: 28px 22px;
+    background: #173D32;
+    color: white;
+    border-radius: 12px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #C4D8C9;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin: 20px 0 12px;
+}
+
+.welcome {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #D7E3D9;
+}
+
+.event-year {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 14px;
+    border: 1px solid #829E89;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* RESOURCES */
+
+.resources {
+    padding: 10px 20px 30px;
+}
+
+.resources h2 {
+    font-size: 21px;
+    color:#07256c;
+    margin-bottom: 5px;
+}
+
+.section-description {
+    font-size: 13px;
+    color: #718076;
+    margin-bottom: 20px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.resource-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    background: white;
+    border: 1px solid #E3E9E3;
+    border-radius: 10px;
+
+    padding: 18px 14px;
+    min-height: 175px;
+}
+
+.card-number {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    font-size: 11px;
+    color: #9BA99D;
+}
+
+.card-icon {
+    font-size: 27px;
+    color: #62b2f3;
+    margin-bottom: 15px;
+}
+
+.resource-card h3 {
+    font-size: 15px;
+    color: #65ccdc;
+    margin: 0 0 7px;
+}
+
+.resource-card p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #718076;
+    margin: 0;
+}
+
+.card-link {
+    display: block;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #3169ad;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #E9EEE9;
+    color: #717b80;
+}
+
+footer h4 {
+    font-size: 11px;
+    color: #172b3d;
+}
+
+footer p {
+    font-size: 11px;
+}
