@@ -24,14 +24,20 @@ body {
     font-family: Arial, sans-serif;
     background: #F4F7FA;
     color: #263747;
+
+    overflow: hidden;
 }
 
 /* Gallery Header */
 .gallery-header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
     background: #0360ac;
     color: white;
-
     padding: 22px 20px;
     min-height: 125px;
 
@@ -112,7 +118,13 @@ body {
 .gallery-container {
     max-width: 950px;
     margin: auto;
+
+    height: calc(100vh - 125px);
+    margin-top: 125px;
+
     padding: 35px 20px 55px;
+
+    overflow-y: auto;
 }
 
 /* Gallery Grid */
@@ -226,6 +238,10 @@ footer p {
 
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+    .gallery-container {
+        height: calc(100vh - 115px);
+        margin-top: 115px;
     }
 
     .gallery-header {

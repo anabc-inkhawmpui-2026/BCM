@@ -9,16 +9,29 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #F4F6F3;
-    
 }
 
 /* HEADER */
-
+.intro-text {
+    font-size: 13px;
+    font-style: italic;
+    color:#3d4144;
+    text-align: justify;
+    margin-top: -3px;;
+    line-height: 1.6;
+}
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 16px 20px;
+
     background: white;
     border-bottom: 1px solid #E5E9E5;
 }
@@ -39,6 +52,9 @@ body {
     font-size: 12px;
     color: #2a6ebc;
     margin: 4px 0 5px;
+}
+main {
+    padding-top: 100px;
 }
 
 /* HERO */
