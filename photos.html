@@ -25,7 +25,6 @@ body {
     background: #F4F7FA;
     color: #263747;
 
-    overflow: hidden;
 }
 
 /* Gallery Header */
@@ -166,12 +165,20 @@ body {
 
 /* Gallery Icon */
 .gallery-icon {
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
 
-    border-radius: 10px;
-    background: #E5F1FC;
-    color: #0360AC;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        145deg,
+        #F7F2FD,
+        #EDE3FA
+    );
+
+    color: #8750A8;
+
+    border: 1px solid #E7D9F5;
 
     display: flex;
     align-items: center;
@@ -179,17 +186,33 @@ body {
 
     font-size: 22px;
     margin-bottom: 14px;
+
+    box-shadow: 0 2px 6px rgba(95, 55, 130, 0.06);
+
+    transition: all 0.25s ease;
+}
+
+/* Icon Hover */
+.gallery-card:hover .gallery-icon {
+    background: linear-gradient(
+        145deg,
+        #EDE2FA,
+        #E3D3F5
+    );
+
+    color: #754092;
+    transform: translateY(-2px);
 }
 
 /* Card Heading */
 .gallery-card h3 {
-    color: #03447F;
+    color: #344454;
     margin: 0 0 8px;
 }
 
 /* Card Description */
 .gallery-card p {
-    color: #687B8C;
+    color: #718096;
     font-size: 14px;
     line-height: 1.5;
     margin: 0 0 20px;
@@ -199,9 +222,9 @@ body {
 .gallery-explore {
     margin-top: auto;
 
-    color: #687B8C;
-    font-size: 14px;
-    font-weight: 600;
+    color: #64748B;
+    font-size: 12px;
+    
 
     display: inline-flex;
     align-items: center;
@@ -326,12 +349,13 @@ footer p {
                 <i class="fa-solid fa-images"></i>
             </div>
 
-            <h3>Friday Photos</h3>
+            <h3>Zirtawpni Zan</h3>
+            <p>Thlalak en na</p>
 
     
 
             <span class="gallery-explore">
-                Explore Photos
+                Click Here
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
 
@@ -348,12 +372,15 @@ footer p {
                 <i class="fa-solid fa-images"></i>
             </div>
 
-            <h3>Saturday Photos</h3>
+              <h3>Inrinni Chhun (Rorel)</h3>
+              <p>Thlalak en na</p>
+
+    
 
             
 
             <span class="gallery-explore">
-                Explore Photos
+                Click Here
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
 
@@ -370,12 +397,55 @@ footer p {
                 <i class="fa-solid fa-images"></i>
             </div>
 
-            <h3>Sunday Photos</h3>
+            <h3>Inrinni Zan</h3>
+             <p>Thlalak en na</p>
 
         
 
             <span class="gallery-explore">
-                Explore Photos
+               Click Here
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+
+        </a>
+
+        <a href="YOUR_SUNDAY_GOOGLE_DRIVE_LINK"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="gallery-card">
+
+            <div class="gallery-icon">
+                <i class="fa-solid fa-images"></i>
+            </div>
+
+            <h3>Pathianni Zing</h3>
+             <p>Thlalak en na</p>
+
+        
+
+            <span class="gallery-explore">
+               Click Here
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+
+        </a>
+
+        <a href="YOUR_SUNDAY_GOOGLE_DRIVE_LINK"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="gallery-card">
+
+            <div class="gallery-icon">
+                <i class="fa-solid fa-images"></i>
+            </div>
+
+            <h3>Pathianni Zan</h3>
+             <p>Thlalak en na</p>
+
+        
+
+            <span class="gallery-explore">
+               Click Here
                 <i class="fa-solid fa-arrow-right"></i>
             </span>
 
