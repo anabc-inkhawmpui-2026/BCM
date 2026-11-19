@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube Live | AIOC</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #F4F7FA;
+            color: #344454;
+        }
+
+        /* HEADER */
+        .gallery-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: #0360ac;
+            color: white;
+            min-height: 125px;
+            padding: 20px;
+
+            border-bottom: 3px solid #8CC9F5;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 13px;
+            color: white;
+            background: #03447F;
+            border: 1px solid #B7DFFF;
+            border-radius: 6px;
+
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .back-link:hover {
+            background: #023565;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .header-content img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .header-text p {
+            margin: 0 0 5px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .header-text span {
+            display: block;
+            margin-top: 5px;
+            font-size: 13px;
+            color: #E5F1FC;
+        }
+
+        /* MAIN CONTENT */
+        .gallery-container {
+            max-width: 950px;
+            margin: 125px auto 0;
+            padding: 35px 20px 45px;
+            min-height: calc(100vh - 125px);
+        }
+
+        .page-intro {
+            color: #718096;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 0 25px;
+        }
+
+        /* CARD GRID */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 0.5fr);
+            gap: 16px;
+        }
+
+        /* DAY CARDS */
+        .gallery-card {
+            background: white;
+            border: 1px solid #D6E5F2;
+            border-radius: 12px;
+
+            padding: 24px;
+            height: 150px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            text-decoration: none;
+            color: inherit;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+
+            transition: transform 0.2s ease,
+                        box-shadow 0.2s ease,
+                        border-color 0.2s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-4px);
+            border-color: #62B2F3;
+            box-shadow: 0 6px 18px rgba(3,96,172,0.12);
+        }
+
+        /* DAY HEADING WITH YOUTUBE ICON */
+        .card-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* YOUTUBE ICON */
+        .gallery-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+
+            border-radius: 10px;
+
+            /*background: #FFF0F0;*/
+            color: #FF0000;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 23px;
+            margin: 0;
+
+            transition: all 0.25s ease;
+        }
+
+        .gallery-card:hover .gallery-icon {
+            background: #FFE2E2;
+            color: #E60000;
+            transform: translateY(-2px);
+        }
+
+        /* CARD HEADING */
+        .gallery-card h3 {
+            color: #344454;
+            font-size: 21px;
+            margin: 0;
+        }
+
+        /* CARD DESCRIPTION */
+        .gallery-card p {
+            color: #718096;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0 0 20px;
+        }
+
+        /* WATCH LIVE TEXT */
+        .gallery-explore {
+            margin-top: 0px;
+
+            color: #64748B;
+            font-size: 14px;
+            font-weight: 600;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .gallery-card:hover .gallery-explore {
+            color: #0360ac;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            background: #03447F;
+            color: white;
+
+            padding: 25px 15px;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #DCEEFF;
+            line-height: 1.8;
+        }
+
+        footer .host {
+            color: #B7DFFF;
+        }
+
+        /* ACCESSIBILITY */
+        .gallery-card:focus-visible,
+        .back-link:focus-visible {
+            outline: 3px solid #62B2F3;
+            outline-offset: 4px;
+        }
+
+        /* TABLET */
+        @media (max-width: 700px) {
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 550px) {
+
+            .gallery-header {
+                min-height: 115px;
+                padding: 18px 12px;
+            }
+
+            .header-content {
+                gap: 10px;
+                margin-top: 27px;
+            }
+
+            .header-content img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .header-text p {
+                font-size: 9px;
+                letter-spacing: 0.5px;
+            }
+
+            .header-text h1 {
+                font-size: 21px;
+            }
+
+            .header-text span {
+                font-size: 12px;
+            }
+
+            .back-link {
+                top: 8px;
+                left: 10px;
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            .gallery-container {
+                margin-top: 115px;
+                padding: 25px 15px 35px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-card {
+                min-height: 165px;
+                padding: 22px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="gallery-header">
+
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back
+        </a>
+
+        <div class="header-content">
+
+            <img src="images/Bcm_logo.png" alt="BCM Logo">
+
+            <div class="header-text">
+                <p>AIZAWL NORTH AREA BAPTIST COUNCIL</p>
+                <h1>YouTube Live</h1>
+                <span>Watch the event live</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="gallery-container">
+
+        <p class="page-intro">
+            Watch the live programme of each day through the links below.
+        </p>
+
+        <div class="gallery-grid">
+
+            <!-- DAY 1 -->
+            <a href="PASTE_DAY_1_YOUTUBE_LINK_HERE"
+               class="gallery-card"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="card-heading">
+
+                    <div class="gallery-icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+
+                    <h3>Zirtawpni Zan</h3>
+
+                </div>
+
+                <p>Inkhawm Programme</p>
+
+                <span class="gallery-explore">
+                    Watch Live <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+            <!-- DAY 2 -->
+            <a href="PASTE_DAY_2_YOUTUBE_LINK_HERE"
+               class="gallery-card"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="card-heading">
+
+                    <div class="gallery-icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+
+                    <h3>Inrinni</h3>
+
+                </div>
+
+                <p>Inrinni Chhun Rorel</p>
+
+                <span class="gallery-explore">
+                    Watch Live <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+            <!-- DAY 3 -->
+            <a href="PASTE_DAY_3_YOUTUBE_LINK_HERE"
+               class="gallery-card"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="card-heading">
+
+                    <div class="gallery-icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+
+                    <h3>Pathianni Zan</h3>
+
+                </div>
+
+                <p>Third Day Programme</p>
+
+                <span class="gallery-explore">
+                    Watch Live <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>AIZAWL NORTH AREA BAPTIST COUNCIL</p>
+        <p class="host">Hosted by BCM Chaltlang</p>
+        <p>© 2026 · All rights reserved</p>
+    </footer>
+
+</body>
+</html>
