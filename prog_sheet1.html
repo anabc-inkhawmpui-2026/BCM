@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BCM ABC</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+
+            
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+    padding: 8px 12px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    background: #0360ac;
+}
+
+.navbar a {
+    flex-shrink: 0;
+    display: block;
+
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+
+.navbar a:hover {
+    background: #023b7d;
+}
+
+.programme {
+    padding: 28px 20px;
+    min-height: 200px;
+    border-bottom: 1px solid #ddd;
+    scroll-margin-top: 50px;
+}
+
+.programme h2 {
+    color: #173D32;
+}
+
+            .box-1 {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+    
+    margin: -10px auto;
+    border: 1px solid black;
+}
+
+            .logo {
+
+                
+                display:inline;
+                position: relative;
+
+                top:10px;
+                left:50px;
+
+                width:40px;
+                height:40px;
+            }
+
+          /* FIXED NAVBAR */
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 1000;
+    background: #0360ac;
+}
+
+/* NAVIGATION */
+.nav-wrapper .navbar {
+    position: relative;
+    width: 100%;
+    height: 52px;
+    padding: 8px 52px 8px 12px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+/* MAIN SCROLLING AREA */
+.main-content {
+    position: absolute;
+    top:-10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+    padding-bottom: 30px;
+}
+
+
+
+
+.navbar a.na {
+    position: fixed;
+    left:3px;
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 35px;
+    padding: 0 6px;
+
+    color: white;
+    background: #03447F;
+
+    border: 2px solid #B7DFFF;
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+}
+
+/* Back button hover */
+.navbar a.na:hover {
+    background: #023565;
+    border-color: white;
+}
+
+.programme-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.programme-table td {
+    padding: 0;
+    vertical-align: top;
+}
+
+.programme-table td:nth-child(1) {
+    width: 44%;
+}
+
+.programme-table td:nth-child(2) {
+    width: 5%;
+    text-align: center;
+}
+
+.programme-table td:nth-child(3) {
+    width: 51%;
+}
+
+.sheet-title,
+.sheet-date {
+    color: #91432F;
+    margin: 0;
+}
+
+.sheet-title {
+    font-size: 16px;
+    font-weight: 570;
+}
+
+.sheet-date {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.buatsaihpuitute-section {
+    text-align: left;
+}
+.buatsaih {
+    list-style:none;
+    white-space: nowrap;
+    position: relative;
+    left:-47px;
+}
+
+@media (max-width: 550px) {
+    .programme-table {
+        font-size: 15px;
+    }
+
+    .programme-table td:nth-child(1) {
+        width: 44%;
+    }
+
+    .programme-table td:nth-child(2) {
+        width: 5%;
+    }
+
+    .programme-table td:nth-child(3) {
+        width: 51%;
+    }
+}
+            
+        </style>
+
+    </head>
+    <body>
+        
+<div class="nav-wrapper">
+    
+    <nav class="navbar" id="programmeNav">
+        <a class="na" href="index.html" aria-label="Back to homepage">
+            back
+        </a>
+        <a href="#service1"> </a>
+        <a href="#service1">Zirtawpni Zan</a>
+        <a href="#service2">Inrinni Chhun</a>
+        <a href="#service3">Inrinni Zan</a>
+        <a href="#service4">Pathianni Zing</a>
+        <a href="#service5">Pathianni Chawhnu</a>
+        <a href="#service6">Pathianni Zan</a>
+    </nav>
+
+ <!--   <button class="nav-toggle" id="navToggle"
+            type="button" aria-label="Scroll navigation right">
+        ›
+    </button> -->
+</div>
+<!--<div class="back">
+<a class="na" href="index.html" aria-label="Back to homepage">
+    ‹
+</a>
+</div> -->
+
+  <main class="main-content">
+<section id="service1"
+         class="programme"
+         data-start="2026-10-24T09:00:00+05:30"
+         data-end="2026-10-24T12:00:00+05:30">
+<div class="box-1 programme-sheet">
+
+    <h4 class="sheet-title">ZAN INKHAWM</h4>
+    <h4 class="sheet-date">20.11.2026 (Zirtawp) | 7:00 p.m.</h4>
+
+    <table class="programme-table">
+
+        <tr>
+            <td>Hruaitu</td>
+            <td>:</td>
+            <td>Upa T. Lalrinawma<br>
+                (Bawngkawn Bial,<br>Bawngkawn)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Palai lawmna leh Thupuan</td>
+            <td>:</td>
+            <td>Secretary, AN-ABC</td>
+        </tr>
+
+        <tr>
+            <td>Thawhlawm hlantu</td>
+            <td>:</td>
+            <td>Upa K.D. Lianthanga<br>
+                (North Chaltlang Bial,<br>Lungmuat)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Thuchah</td>
+            <td>:</td>
+            <td>Rev. H. Lalengmawia<br>(Kolasib Bialtu)</td>
+        </tr>
+
+        <tr>
+            <td>Thupui</td>
+            <td>:</td>
+            <td><i>Khawvel danglam zelah<br>Pathian hnaih rawh</i></td>
+        </tr>
+
+        <tr>
+            <td>Zaipawl</td>
+            <td>:</td>
+            <td>Chaltlang Mual veng<br>
+                Ramlhun North Brigade<br>
+                Ramlhun Venglai
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+</section>
+<section id="service2"
+         class="programme"
+         data-start="2026-10-24T09:00:00+05:30"
+         data-end="2026-10-24T12:00:00+05:30">
+    <div class="box-1 programme-sheet">
+
+    <h4 class="sheet-title">BIBLE STUDY</h4>
+    <h4 class="sheet-date">21.11.2026 (Inrinni) | 6:30 a.m.</h4>
+
+    <table class="programme-table">
+
+        <tr>
+            <td>Hruaitu</td>
+            <td>:</td>
+            <td>P/p Zoengmawia<br>
+                (Kolasib Bial)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Thupui</td>
+            <td>:</td>
+            <td><i>Israel faten Pathian an<br>hnaih dan</i></td>
+        </tr>
+
+    </table>
+
+</div>
+</section>
+
+<section id="service2"
+         class="programme"
+         data-start="2026-10-24T09:00:00+05:30"
+         data-end="2026-10-24T12:00:00+05:30">
+    <div class="box-1 programme-sheet">
+
+    <h4 class="sheet-title">ROREL</h4>
+    <h4 class="sheet-date">21.11.2026 (Inrinni) | 10:30 a.m.</h4>
+
+    <table class="programme-table">
+
+        <tr>
+            <td>Hunserh</td>
+            <td>:</td>
+            <td>Upa B. Lalzarzova</td>
+        </tr>
+
+        <tr>
+            <td>Rorel Hruaitu</td>
+            <td>:</td>
+            <td>Upa Lalchhuanawma Hrahsel</td>
+        </tr>
+
+        <tr>
+            <td>Hruaitu thlanna</td>
+            <td>:</td>
+            <td>Rev. PC. Lalropuia<br>
+                (Shillong Bialtu)
+            </td>
+        </tr>
+    </table>
+
+</div>
+</section>
+
+<section id="service3"
+         class="programme"
+         data-start="2026-10-24T18:00:00+05:30"
+         data-end="2026-10-24T21:00:00+05:30">
+   <div class="box-1 programme-sheet">
+
+    <h4 class="sheet-title">ZAN INKHAWM</h4>
+    <h4 class="sheet-date">21.11.2026 (Inrinni) | 7:00 p.m.</h4>
+
+    <table class="programme-table">
+
+        <tr>
+            <td>Hruaitu</td>
+            <td>:</td>
+            <td>Upa K. Lalzarliana<br>
+                (Kolasib Bial, Diakkawn)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Thupuan</td>
+            <td>:</td>
+            <td>Secretary, AN-ABC</td>
+        </tr>
+
+        <tr>
+            <td>Thawhlawm hlantu</td>
+            <td>:</td>
+            <td>Upa Lalramzauva<br>
+                (Shillong)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Thuchah</td>
+            <td>:</td>
+            <td>Rev. B. Rothangpuia<br>(Bawngkawn Bialtu)</td>
+        </tr>
+
+        <tr>
+            <td>Thupui</td>
+            <td>:</td>
+            <td><i>Pathian hnaih turin sual kalsan rawh</td>
+        </tr>
+
+        <tr>
+            <td>Zaipawl</td>
+            <td>:</td>
+            <td>Ramhlun South<br>
+                Lily Veng<br>
+                Kolasib<br>
+                Ramhlun Bial
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+</section>
+
+<section id="service4"
+         class="programme"
+         data-start="2026-10-24T09:00:00+05:30"
+         data-end="2026-10-24T12:00:00+05:30">
+    <div class="box-1 programme-sheet">
+
+    <h4 class="sheet-title">BIBLE STUDY</h4>
+    <h4 class="sheet-date">22.11.2026 (Pathianni) | 6:30 a.m.</h4>
+
+    <table class="programme-table">
+
+        <tr>
+            <td>Hruaitu</td>
+            <td>:</td>
+            <td style="white-space: nowrap;">Rev. Joseph Liansangpuia<br>
+                (North Chaltlang Bialtu)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Thupui</td>
+            <td>:</td>
+            <td><i>Thuthlung thar Kohhran ten Pathian an hnaih dan</i></td>
+        </tr>
+
+    </table>
+
+</div>
+</section>
+
+<section id="service4"
+         class="programme"
+         data-start="2026-10-24T09:00:00+05:30"
+         data-end="2026-10-24T12:00:00+05:30">
+    <div class="box-1 programme-sheet">
+
+    <h4 class="sheet-title">KOHHRAN UPA NEMNGHEH INKHAWM</h4>
+    <h4 class="sheet-date">22.11.2026 (Pathianni) | 10:30 a.m.</h4>
+
+    <table class="programme-table">
+
+        <tr>
+            <td>Nemnghettu</td>
+            <td>:</td>
+            <td>Rev. Hrangaia Hmar,<br>
+                Ramhlun Bial
+            </td>
+        </tr>
+
+        <tr>
+            <td>Bible Chhiar</td>
+            <td>:</td>
+            <td>Upa Laltlanzova <br>
+            (Kolasib Bial, Vengthar)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>:</td>
+            <td>Upa Vanlalnghaka <br>
+            (Bawngkawn Bial, Bawngkawn)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Thawhlawm hlantu</td>
+            <td>:</td>
+            <td>Upa C. Ngunlala<br>
+                (Ramhlun Bial, Ramhlun South)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Tawngtaisakna</td>
+            <td>:</td>
+            <td>Rev. C.L. Malsawma<br>
+                (Ramhlun Venglai)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Zaipawl</td>
+            <td>:</td>
+            <td>
+                Durtlang Leitan<br>
+                Bawngkawn Bial<br>
+                Aizawl Area Baptist Choir
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+</section>
+
+<!-- LALPA ZANRIAH SACRAMENT INKHAWM -->
+<section id="service5"
+         class="programme"
+         data-start="2026-11-22T13:30:00+05:30"
+         data-end="2026-11-22T16:30:00+05:30">
+    <div class="box-1 programme-sheet">
+
+        <h4 class="sheet-title">LALPA ZANRIAH SACRAMENT INKHAWM</h4>
+        <h4 class="sheet-date">22.11.2026 (Pathianni) | 1:30 p.m.</h4>
+
+        <table class="programme-table">
+
+            <tr>
+                <td>Buatsaihtu</td>
+                <td>:</td>
+                <td>Rev. H. Lalremruata,<br>
+                    Chaltlang Bial
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zaipawl</td>
+                <td>:</td>
+                <td>Durtlang Mual Veng<br>
+                    Chaltlang Bial<br>
+                    Kolasib Bial
+                </td>
+            </tr>
+
+        </table>
+
+        <div class="buatsaihpuitute-section">
+            <p><strong>Buatsaihpuitute :</strong></p>
+            <ul class="buatsaih">
+                <li>i) Upa Ronald Lalduhsaka (Phainuam)</li>
+                <li>ii) Upa K. Zalanga (State Veng)</li>
+                <li>iii) Upa Dr. Jenny Sapthanhnuni (Omega Zophai)</li>
+                <li>iv) Upa Pachhunga (Meidum)</li>
+                <li>v) Upa Demgou (Madanrting)</li>
+                <li>vi) Upa Lalnunzira (Shillong)</li>
+                <li>vii) Upa V. Vanlalruata (Thingthelth)</li>
+                <li>viii) Upa K.C. Lalramhluna (Lungmuat)</li>
+                <li>ix) Upa Rohmingthanga (Chaltlang Mual Veng)</li>
+                <li>x) Upa Lalmuanpuia (Chaltlang)</li>
+                <li>xi) Upa Lalthantluanga Colney (Durtlang Leitan)</li>
+                <li>xii) Upa C. Lalhumhima (Ramhlun North)</li>
+                <li>xiii) Upa B. Lalṭhakima (Ramhlun South)</li>
+                <li>xiv) Upa Vanlaldika Pachuau (Brigade)</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+
+<!-- ZAN INKHAWM -->
+<section id="service6"
+         class="programme"
+         data-start="2026-11-22T19:00:00+05:30"
+         data-end="2026-11-22T21:00:00+05:30">
+    <div class="box-1 programme-sheet">
+
+        <h4 class="sheet-title">ZAN INKHAWM</h4>
+        <h4 class="sheet-date">22.11.2026 (Pathianni) | 7:00 p.m.</h4>
+
+        <table class="programme-table">
+
+            <tr>
+                <td>Hruaitu</td>
+                <td>:</td>
+                <td>Upa Thanchungnunga<br>
+                    (Chaltlang Bial, Chaltlang)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Thupuan & Reports</td>
+                <td>:</td>
+                <td>Secretary, AN-ABC</td>
+            </tr>
+
+            <tr>
+                <td>Hruaitu lakluhna</td>
+                <td>:</td>
+                <td>Upa Lalchhuanawma Hrahsel,<br>
+                    Chairman, AN-ABC
+                </td>
+            </tr>
+
+            <tr>
+                <td>Thawhlawm hlantu</td>
+                <td>:</td>
+                <td>Upa F. Zomawia (Nowngpoh)</td>
+            </tr>
+
+            <tr>
+                <td>Thuchah</td>
+                <td>:</td>
+                <td>Upa B. Lalzarzova<br>
+                    (Out going Chairman)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Thupui</td>
+                <td>:</td>
+                <td><em>Pathian hnaih hi a tha a ni.</em></td>
+            </tr>
+
+            <tr>
+                <td>Zaipawl</td>
+                <td>:</td>
+                <td>Chaltlang, Vairengte Bial<br>
+                    Bawngkawn, Diakkawn
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+</section>
+</main>
+
+
+    
+    <script>
+        
+const nav = document.getElementById("programmeNav");
+const toggle = document.getElementById("navToggle");
+
+function updateToggle() {
+    const maxScroll = nav.scrollWidth - nav.clientWidth;
+    const atEnd = nav.scrollLeft >= maxScroll - 5;
+    const atStart = nav.scrollLeft <= 5;
+
+    toggle.textContent = atEnd ? "‹" : "›";
+    toggle.setAttribute(
+        "aria-label",
+        atEnd ? "Scroll navigation left" : "Scroll navigation right"
+    );
+
+    // Hide the button if all tabs already fit
+    toggle.style.display =
+        maxScroll <= 5 || (atStart && atEnd) ? "none" : "flex";
+}
+
+toggle.addEventListener("click", () => {
+    const maxScroll = nav.scrollWidth - nav.clientWidth;
+    const atEnd = nav.scrollLeft >= maxScroll - 5;
+
+    nav.scrollBy({
+        left: atEnd ? -nav.clientWidth * 0.65 : nav.clientWidth * 0.65,
+        behavior: "smooth"
+    });
+});
+
+nav.addEventListener("scroll", updateToggle);
+window.addEventListener("resize", updateToggle);
+
+updateToggle();
+
+        </script>
+        </body>
+</html>
