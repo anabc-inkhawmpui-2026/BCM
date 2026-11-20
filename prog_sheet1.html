@@ -440,7 +440,7 @@ body {
         <tr>
             <td>Thupui</td>
             <td>:</td>
-            <td><i>Pathian hnaih turin sual kalsan rawh</td>
+            <td><i>Pathian hnaih turin sual kalsan rawh</i></td>
         </tr>
 
         <tr>
@@ -679,7 +679,7 @@ body {
     
     <script>
         
-const nav = document.getElementById("programmeNav");
+/*const nav = document.getElementById("programmeNav");
 const toggle = document.getElementById("navToggle");
 
 function updateToggle() {
@@ -712,74 +712,37 @@ nav.addEventListener("scroll", updateToggle);
 window.addEventListener("resize", updateToggle);
 
 updateToggle();
-
+*/
 
 function scrollToCurrentProgramme() {
-
     const programmes = Array.from(
         document.querySelectorAll(".programme[data-start][data-end]")
     );
-
     if (programmes.length === 0) return;
 
     const now = new Date();
 
-    // Get programmes belonging to today's local calendar date
-    const todayProgrammes = programmes.filter(programme => {
+    programmes.sort((a, b) =>
+        new Date(a.dataset.start) - new Date(b.dataset.start)
+    );
 
-        const start = new Date(programme.dataset.start);
+    let target = programmes.find(p =>
+        now >= new Date(p.dataset.start) && now < new Date(p.dataset.end)
+    );
 
-        return (
-            start.getFullYear() === now.getFullYear() &&
-            start.getMonth() === now.getMonth() &&
-            start.getDate() === now.getDate()
-        );
-
-    });
-
-    if (todayProgrammes.length === 0) return;
-
-    // Find currently running programme
-    let target = todayProgrammes.find(programme => {
-
-        const start = new Date(programme.dataset.start);
-        const end = new Date(programme.dataset.end);
-
-        return now >= start && now < end;
-
-    });
-
-    // If none is running, find the next upcoming programme
     if (!target) {
-
-        target = todayProgrammes.find(programme => {
-
-            const start = new Date(programme.dataset.start);
-
-            return start > now;
-
-        });
-
+        target = programmes.find(p => new Date(p.dataset.start) > now);
     }
 
-    // If all programmes have ended, select the last one
     if (!target) {
-        target = todayProgrammes[todayProgrammes.length - 1];
+        target = programmes[programmes.length - 1];
     }
 
-    // Automatically scroll to the selected programme
-    target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-
-// Wait until the page is fully loaded
 window.addEventListener("load", () => {
-
     setTimeout(scrollToCurrentProgramme, 500);
-
 });
 
 
