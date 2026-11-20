@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>General Information | BCM ABC</title>
+
+    <link rel="stylesheet" href="photos.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    background: #F4F7FA;
+    color: #030405;
+}
+
+/* Header */
+.gallery-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: #0360ac;
+    color: white;
+    padding: 22px 20px;
+    min-height: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 3px solid #8CC9F5;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    color: white;
+    text-decoration: none;
+
+    background: #03447F;
+    border: 1px solid #B7DFFF;
+    border-radius: 7px;
+
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.back-button:hover {
+    background: #023565;
+}
+
+/* Logo and Header Text */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+/* Logo */
+.gallery-header img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Header Text */
+.header-text {
+    text-align: left;
+}
+
+.gallery-header p {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+    color: #DCEEFF;
+}
+
+.gallery-header h1 {
+    margin: 0 0 3px;
+    font-size: 25px;
+}
+
+.gallery-header span {
+    color: #DCEEFF;
+    font-size: 13px;
+}
+
+/* Main Container */
+.gallery-container {
+    max-width: 850px;
+    margin: auto;
+
+    height: calc(100vh - 125px);
+    margin-top: 125px;
+
+    padding: 30px 20px 55px;
+
+    overflow-y: auto;
+}
+
+/* Introduction */
+.info-intro {
+    background: #E8F3FC;
+    border: 1px solid #BBDCF5;
+    border-left: 4px solid #d12806;
+    border-radius: 10px;
+
+    padding: 17px 20px;
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.info-intro i {
+    color: #ac033b;
+    font-size: 21px;
+    margin-top: 2px;
+}
+
+.info-intro p {
+    margin: 0;
+    color: #344B60;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Information List */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+/* Individual Information Card */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    background: white;
+    border: 1px solid #D6E5F2;
+    border-radius: 11px;
+
+    padding: 19px 20px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.035);
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.info-item:hover {
+    border-color: #8CC9F5;
+    box-shadow: 0 4px 14px rgba(3,96,172,0.08);
+}
+
+/* Number */
+.info-number {
+    min-width: 30px;
+    height: 30px;
+
+    background: #fffb7e;
+    color: #fd0202;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Information Content */
+.info-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.info-content p {
+    margin: 2px 0 0;
+
+    color: #192026;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* Important Timings */
+.timing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 12px;
+}
+
+.timing-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #f9f4b7;
+    border: 1px solid #ec4444;
+    border-radius: 8px;
+
+    padding: 10px 12px;
+
+    color: #131a20;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.timing-item i {
+    color: #0360ac;
+    width: 17px;
+    text-align: center;
+}
+
+.timing-item strong {
+    color: #b60404;
+}
+
+/* Special Invitation */
+.special-note {
+    margin-top: 12px;
+
+    padding: 12px 14px;
+
+    background: #F5F1FA;
+    border-left: 3px solid #8750A8;
+    border-radius: 7px;
+
+    color: #55436A;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.special-note i {
+    color: #8750A8;
+    margin-right: 6px;
+}
+
+/* Website Information */
+.web-info {
+    background: #EAF4FC;
+    border: 1px solid #BBDCF5;
+    border-radius: 11px;
+
+    padding: 20px;
+    margin-top: 22px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.web-info > i {
+    font-size: 23px;
+    color: #0360ac;
+    margin-top: 2px;
+}
+
+.web-info h3 {
+    margin: 0 0 7px;
+    font-size: 15px;
+    color: #03447F;
+}
+
+.web-info p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #1b232a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #03447F;
+    color: white;
+
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+footer p {
+    color: #DCEEFF;
+}
+
+/* Keyboard Accessibility */
+.back-button:focus-visible {
+    outline: 3px solid #62B2F3;
+    outline-offset: 4px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 550px) {
+
+    .gallery-container {
+        height: calc(100vh - 115px);
+        margin-top: 115px;
+        padding: 22px 13px 40px;
+    }
+
+    .gallery-header {
+        min-height: 115px;
+        padding: 18px 12px;
+    }
+
+    .header-content {
+        gap: 10px;
+        margin-top: 27px;
+    }
+
+    .gallery-header img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .gallery-header p {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .gallery-header h1 {
+        font-size: 21px;
+    }
+
+    .gallery-header span {
+        font-size: 12px;
+    }
+
+    .back-button {
+        top: 8px;
+        left: 10px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .info-intro {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .info-intro p {
+        font-size: 13px;
+    }
+
+    .info-item {
+        padding: 16px 13px;
+        gap: 11px;
+    }
+
+    .info-number {
+        min-width: 27px;
+        height: 27px;
+        font-size: 12px;
+    }
+
+    .info-content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .timing-item {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+
+    .special-note {
+        font-size: 12px;
+    }
+
+    .web-info {
+        padding: 16px;
+        gap: 11px;
+    }
+
+    .web-info p {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="gallery-header">
+
+    <a href="index.html" class="back-button">
+        <i class="fa-solid fa-arrow-left"></i> Back
+    </a>
+
+    <div class="header-content">
+
+        <img src="images/Bcm_logo.png" alt="BCM Logo">
+
+        <div class="header-text">
+            <p>AIZAWL NORTH AREA BAPTIST COUNCIL</p>
+            <h1>General Information</h1>
+            <span>Inkhawmpui chhunga hriat tur leh thil pawimawhte</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- MAIN GENERAL INFORMATION -->
+<main class="gallery-container">
+
+
+    <!-- INFORMATION LIST -->
+    <div class="info-list">
+
+        <!-- 1 -->
+        <div class="info-item">
+
+            <div class="info-number">1</div>
+
+            <div class="info-content">
+                <p>
+                    Palai lokal te reception a in report pahin badge
+                    leh report &amp; agenda bu lak zel nise.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+        <div class="info-item">
+
+            <div class="info-number">2</div>
+
+            <div class="info-content">
+                <p>
+                    Mikhual te mutbu keng remchang lo leh sa ei theilo
+                    te kan awm chuan, reception ah kan in report zel
+                    dawn nia.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 3 -->
+        <div class="info-item">
+
+            <div class="info-number">3</div>
+
+            <div class="info-content">
+                <p>
+                    Inkhawm apiangin thawhlawm lakkhawm ani ang.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+        <div class="info-item">
+
+            <div class="info-number">4</div>
+
+            <div class="info-content">
+
+                <p>
+                    Inkhawm leh Rorel tan hun a hnuaia tarlan ang
+                    hian ruahman a ni.
+                </p>
+
+                <div class="timing-list">
+
+                    <div class="timing-item">
+                        
+                        <span>
+                            Zan lam inkhawm tan hun –
+                            <strong>7:00 PM</strong>
+                            , <strong>6:30 PM</strong> atangin Pathian faka zaiho tur a ni
+                        </span>
+                    </div>
+
+                    <div class="timing-item">
+                       
+                        <span>
+                            <strong>ROREL TAN HUN – 10:30 AM</strong>
+                        </span>
+                    </div>
+
+                    <div class="timing-item">
+                        
+                        <span>
+                            Pathianni zing inkhawm tan hun –
+                            <strong>10:30 AM</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="timing-item" style="margin-top: 12px;">
+                   
+                    Inrinni tlai ah Rorel palai leh zaipawl ten
+                    ruai min kilsak turin kan sawm vek a che u.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+        <div class="info-item">
+
+            <div class="info-number">5</div>
+
+            <div class="info-content">
+                <p>
+                    Motor keng tan Biak In bulah motor dahna tur
+                    parking a awm a. Lirthei dah tuten Traffic duty
+                    te ruahmanna kan ngaichang zel dawn nia.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+        <div class="info-item">
+
+            <div class="info-number">6</div>
+
+            <div class="info-content">
+                <p>
+                    Zaipawl ten Sound i/c te enlawkna hun siamah
+                    enlawk tum nise, harsatna a awm chuan insiamrem
+                    zel tum a ni ang.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+        <div class="info-item">
+
+            <div class="info-number">7</div>
+
+            <div class="info-content">
+                <p>
+                    Inkhawm ban chhuah dawn ah Usher duty te
+                    ngaichang hram hram turin kan in ngen e.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+        <div class="info-item">
+
+            <div class="info-number">8</div>
+
+            <div class="info-content">
+                <p>
+                    Nuamsam lo kan awm chuan medical duty te
+                    Hall no.2 ah a rawn theih e.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 9 -->
+        <div class="info-item">
+
+            <div class="info-number">9</div>
+
+            <div class="info-content">
+                <p>
+                    Inkhawmpui programme te, thlalak leh information
+                    tul te AN ABC inkhawmpui webpage or QR code ah
+                    en leh download theih a ni e.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© BCM ABC | Aizawl North Area Baptist Council</p>
+</footer>
+
+</body>
+</html>
