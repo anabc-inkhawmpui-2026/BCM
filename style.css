@@ -130,13 +130,13 @@ main {
     color: inherit;
 
     background: white;
+    border: 1px solid rgb(243, 243, 243);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
 
     padding: 16px 18px;
     min-height: 0;
 }
-
 
 /* NEW: hover feedback */
 .resource-card:hover {
