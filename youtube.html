@@ -249,6 +249,71 @@
             outline-offset: 4px;
         }
 
+
+
+        .live-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.live-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #dde5ee;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    height: auto;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.live-card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.live-card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.live-icon {
+    font-size: 2rem;
+    line-height: 1;
+    color: #ff0000;
+}
+
+.live-title {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #222;
+}
+
+.live-date {
+    margin: 0;
+    color: #6b7a8c;
+    font-size: 1rem;
+}
+
+.live-link {
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #44546a;
+}
+
+.live-card:hover .live-link {
+    color: #8b1a1a; /* change to match your theme color */
+}
+
         /* TABLET */
         @media (max-width: 700px) {
 
@@ -339,91 +404,61 @@
 
 
     <!-- MAIN CONTENT -->
-    <main class="gallery-container">
+   <main class="gallery-container">
 
-        <p class="page-intro">
-            Watch the live programme of each day through the links below.
-        </p>
+    <p class="page-intro">
+        Watch the live programme of each session through the links below.
+    </p>
 
-        <div class="gallery-grid">
+    <div class="live-grid">
 
-            <!-- DAY 1 -->
-            <a href="PASTE_DAY_1_YOUTUBE_LINK_HERE"
-               class="gallery-card"
-               target="_blank"
-               rel="noopener noreferrer">
+        <!-- ZIRTAWPNI ZAN -->
+        <a href="PASTE_ZIRTAWPNI_ZAN_YOUTUBE_LINK_HERE"
+           target="_blank" rel="noopener noreferrer" class="live-card">
+            <div class="live-card-top">
+                <i class="fa-brands fa-youtube live-icon"></i>
+                <h4 class="live-title">Zirtawpni Zan</h4>
+            </div>
+            <p class="live-date">20 November 2026</p>
+            <span class="live-link">Watch Live <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-                <div class="card-heading">
+        <!-- INRINNI ZAN -->
+        <a href="PASTE_INRINNI_ZAN_YOUTUBE_LINK_HERE"
+           target="_blank" rel="noopener noreferrer" class="live-card">
+            <div class="live-card-top">
+                <i class="fa-brands fa-youtube live-icon"></i>
+                <h3 class="live-title">Inrinni Zan</h3>
+            </div>
+            <p class="live-date">21 November 2026</p>
+            <span class="live-link">Watch Live <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-                    <div class="gallery-icon">
-                        <i class="fa-brands fa-youtube"></i>
-                    </div>
+        <!-- PATHIANNI ZING -->
+        <a href="PASTE_PATHIANNI_ZING_YOUTUBE_LINK_HERE"
+           target="_blank" rel="noopener noreferrer" class="live-card">
+            <div class="live-card-top">
+                <i class="fa-brands fa-youtube live-icon"></i>
+                <h3 class="live-title">Pathianni Zing</h3>
+            </div>
+            <p class="live-date">22 November 2026</p>
+            <span class="live-link">Watch Live <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-                    <h3>Zirtawpni Zan</h3>
+        <!-- PATHIANNI ZAN -->
+        <a href="PASTE_PATHIANNI_ZAN_YOUTUBE_LINK_HERE"
+           target="_blank" rel="noopener noreferrer" class="live-card">
+            <div class="live-card-top">
+                <i class="fa-brands fa-youtube live-icon"></i>
+                <h3 class="live-title">Pathianni Zan</h3>
+            </div>
+            <p class="live-date">22 November 2026</p>
+            <span class="live-link">Watch Live <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-                </div>
+    </div>
 
-                <p>Inkhawm Programme</p>
-
-                <span class="gallery-explore">
-                    Watch Live <i class="fa-solid fa-arrow-right"></i>
-                </span>
-
-            </a>
-
-
-            <!-- DAY 2 -->
-            <a href="PASTE_DAY_2_YOUTUBE_LINK_HERE"
-               class="gallery-card"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <div class="card-heading">
-
-                    <div class="gallery-icon">
-                        <i class="fa-brands fa-youtube"></i>
-                    </div>
-
-                    <h3>Inrinni</h3>
-
-                </div>
-
-                <p>Inrinni Chhun Rorel</p>
-
-                <span class="gallery-explore">
-                    Watch Live <i class="fa-solid fa-arrow-right"></i>
-                </span>
-
-            </a>
-
-
-            <!-- DAY 3 -->
-            <a href="PASTE_DAY_3_YOUTUBE_LINK_HERE"
-               class="gallery-card"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <div class="card-heading">
-
-                    <div class="gallery-icon">
-                        <i class="fa-brands fa-youtube"></i>
-                    </div>
-
-                    <h3>Pathianni Zan</h3>
-
-                </div>
-
-                <p>Third Day Programme</p>
-
-                <span class="gallery-explore">
-                    Watch Live <i class="fa-solid fa-arrow-right"></i>
-                </span>
-
-            </a>
-
-        </div>
-
-    </main>
+</main>
 
 
     <!-- FOOTER -->
