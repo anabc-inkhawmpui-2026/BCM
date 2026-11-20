@@ -277,8 +277,8 @@ body {
   <main class="main-content">
 <section id="service1"
          class="programme"
-         data-start="2026-10-24T09:00:00+05:30"
-         data-end="2026-10-24T12:00:00+05:30">
+         data-start="2026-11-20T19:00:00+05:30"
+         data-end="2026-11-20T21:00:00+05:30">
 <div class="box-1 programme-sheet">
 
     <h4 class="sheet-title">ZAN INKHAWM</h4>
@@ -335,8 +335,8 @@ body {
 </section>
 <section id="service2"
          class="programme"
-         data-start="2026-10-24T09:00:00+05:30"
-         data-end="2026-10-24T12:00:00+05:30">
+         data-start="2026-11-21T06:30:00+05:30"
+         data-end="2026-11-21T08:30:00+05:30">
     <div class="box-1 programme-sheet">
 
     <h4 class="sheet-title">BIBLE STUDY</h4>
@@ -365,8 +365,8 @@ body {
 
 <section id="service2"
          class="programme"
-         data-start="2026-10-24T09:00:00+05:30"
-         data-end="2026-10-24T12:00:00+05:30">
+         data-start="2026-11-21T10:00:00+05:30"
+         data-end="2026-11-21T16:00:00+05:30">
     <div class="box-1 programme-sheet">
 
     <h4 class="sheet-title">ROREL</h4>
@@ -400,8 +400,8 @@ body {
 
 <section id="service3"
          class="programme"
-         data-start="2026-10-24T18:00:00+05:30"
-         data-end="2026-10-24T21:00:00+05:30">
+         data-start="2026-11-21T18:00:00+05:30"
+         data-end="2026-11-21T22:00:00+05:30">
    <div class="box-1 programme-sheet">
 
     <h4 class="sheet-title">ZAN INKHAWM</h4>
@@ -460,8 +460,8 @@ body {
 
 <section id="service4"
          class="programme"
-         data-start="2026-10-24T09:00:00+05:30"
-         data-end="2026-10-24T12:00:00+05:30">
+         data-start="2026-11-22T06:00:00+05:30"
+         data-end="2026-11-22T12:08:00+05:30">
     <div class="box-1 programme-sheet">
 
     <h4 class="sheet-title">BIBLE STUDY</h4>
@@ -490,8 +490,8 @@ body {
 
 <section id="service4"
          class="programme"
-         data-start="2026-10-24T09:00:00+05:30"
-         data-end="2026-10-24T12:00:00+05:30">
+         data-start="2026-11-22T10:00:00+05:30"
+         data-end="2026-11-22T12:50:00+05:30">
     <div class="box-1 programme-sheet">
 
     <h4 class="sheet-title">KOHHRAN UPA NEMNGHEH INKHAWM</h4>
@@ -611,7 +611,7 @@ body {
 <section id="service6"
          class="programme"
          data-start="2026-11-22T19:00:00+05:30"
-         data-end="2026-11-22T21:00:00+05:30">
+         data-end="2026-11-22T22:00:00+05:30">
     <div class="box-1 programme-sheet">
 
         <h4 class="sheet-title">ZAN INKHAWM</h4>
@@ -712,6 +712,76 @@ nav.addEventListener("scroll", updateToggle);
 window.addEventListener("resize", updateToggle);
 
 updateToggle();
+
+
+function scrollToCurrentProgramme() {
+
+    const programmes = Array.from(
+        document.querySelectorAll(".programme[data-start][data-end]")
+    );
+
+    if (programmes.length === 0) return;
+
+    const now = new Date();
+
+    // Get programmes belonging to today's local calendar date
+    const todayProgrammes = programmes.filter(programme => {
+
+        const start = new Date(programme.dataset.start);
+
+        return (
+            start.getFullYear() === now.getFullYear() &&
+            start.getMonth() === now.getMonth() &&
+            start.getDate() === now.getDate()
+        );
+
+    });
+
+    if (todayProgrammes.length === 0) return;
+
+    // Find currently running programme
+    let target = todayProgrammes.find(programme => {
+
+        const start = new Date(programme.dataset.start);
+        const end = new Date(programme.dataset.end);
+
+        return now >= start && now < end;
+
+    });
+
+    // If none is running, find the next upcoming programme
+    if (!target) {
+
+        target = todayProgrammes.find(programme => {
+
+            const start = new Date(programme.dataset.start);
+
+            return start > now;
+
+        });
+
+    }
+
+    // If all programmes have ended, select the last one
+    if (!target) {
+        target = todayProgrammes[todayProgrammes.length - 1];
+    }
+
+    // Automatically scroll to the selected programme
+    target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+
+// Wait until the page is fully loaded
+window.addEventListener("load", () => {
+
+    setTimeout(scrollToCurrentProgramme, 500);
+
+});
+
 
         </script>
         </body>
