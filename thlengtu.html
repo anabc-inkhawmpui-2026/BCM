@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>General Information | BCM ABC</title>
+
+    <link rel="stylesheet" href="photos.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    background: #F4F7FA;
+    color: #030405;
+}
+
+/* Header */
+.gallery-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: #0360ac;
+    color: white;
+    padding: 22px 20px;
+    min-height: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 3px solid #8CC9F5;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    color: white;
+    text-decoration: none;
+
+    background: #03447F;
+    border: 1px solid #B7DFFF;
+    border-radius: 7px;
+
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.back-button:hover {
+    background: #023565;
+}
+
+/* Logo and Header Text */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+/* Logo */
+.gallery-header img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Header Text */
+.header-text {
+    text-align: left;
+}
+
+.gallery-header p {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+    color: #DCEEFF;
+}
+
+.gallery-header h1 {
+    margin: 0 0 3px;
+    font-size: 25px;
+}
+
+.gallery-header span {
+    color: #DCEEFF;
+    font-size: 13px;
+}
+
+/* Main Container */
+.gallery-container {
+    max-width: 850px;
+    margin: auto;
+
+    height: calc(100vh - 125px);
+    margin-top: 125px;
+
+    padding: 30px 20px 55px;
+
+    overflow-y: auto;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #03447F;
+    color: white;
+
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+footer p {
+    color: #DCEEFF;
+}
+
+/* Keyboard Accessibility */
+.back-button:focus-visible {
+    outline: 3px solid #62B2F3;
+    outline-offset: 4px;
+}
+
+info-section {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 25px 30px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.info-title {
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+
+    color: #222;
+    border-bottom: 2px solid #8b1a1a; /* change to match your theme color */
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+.info-table th,
+.info-table td {
+    padding: 6px 0;
+    text-align: left;
+    vertical-align: top;
+    border: none;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.info-table th {
+    width: 42%;
+    padding-right: 12px;
+    font-weight: 600;
+    color: #444;
+}
+
+.info-table th::after {
+    content: ":";
+}
+
+.info-table td {
+    font-weight: 400;
+    color: #222;
+    word-break: break-word;
+}
+@media (max-width: 600px) {
+    
+}
+
+/* Mobile Responsive */
+@media (max-width: 550px) {
+
+    .gallery-container {
+        height: calc(100vh - 115px);
+        margin-top: 115px;
+        padding: 22px 13px 40px;
+    }
+
+    .gallery-header {
+        min-height: 115px;
+        padding: 18px 12px;
+    }
+
+    .header-content {
+        gap: 10px;
+        margin-top: 27px;
+    }
+
+    .gallery-header img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .gallery-header p {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .gallery-header h1 {
+        font-size: 21px;
+    }
+
+    .gallery-header span {
+        font-size: 12px;
+    }
+
+    .back-button {
+        top: 8px;
+        left: 10px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+
+
+
+
+
+     .info-section {
+        padding: 18px 15px;
+        margin: 0 10px 20px;
+    }
+
+    .info-table th,
+    .info-table td {
+        font-size: 0.95rem;
+    }
+
+    .info-table th {
+        width: 45%;
+    }
+
+   
+}
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="gallery-header">
+
+    <a href="index.html" class="back-button">
+        <i class="fa-solid fa-arrow-left"></i> Back
+    </a>
+
+    <div class="header-content">
+
+        <img src="images/Bcm_logo.png" alt="BCM Logo">
+
+        <div class="header-text">
+            <p>AIZAWL NORTH AREA BAPTIST COUNCIL</p>
+            <h1>Thlengtu Kohhran Chanchin</h1>
+            
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- MAIN GENERAL INFORMATION -->
+<main class="gallery-container">
+
+    <!-- KOHHRAN DINHMUN -->
+    <section class="info-section">
+        <h4 class="info-title">Thlengtu BCM Chaltlang Kohhran Dinhmun</h4>
+
+        <table class="info-table">
+            <tbody>
+                <tr>
+                    <th>Din ni</th>
+                    <td>11.2.1996</td>
+                </tr>
+                <tr>
+                    <th>Upa zat</th>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th>Rawngbawltu zat</th>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <th>Members</th>
+                    <td>375 (Permanent – 286, Temporary – 89)</td>
+                </tr>
+                <tr>
+                    <th>Fellowship Department Members</th>
+                    <td>BMP – 38, TKP – 175, BKHP – 63, KNP – 65</td>
+                </tr>
+                <tr>
+                    <th>Chhungkaw zat</th>
+                    <td>64</td>
+                </tr>
+                <tr>
+                    <th>Baptisma chang zat</th>
+                    <td>234</td>
+                </tr>
+                <tr>
+                    <th>Baptisma chang thar</th>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th>Member punna</th>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <th>Member kiamna</th>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th>2026-27 Assembly Budget</th>
+                    <td>₹ 46,98,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- KOHHRAN PUIPATE -->
+    <section class="info-section">
+        <h4 class="info-title">Kohhran Puipate</h4>
+
+        <table class="info-table">
+            <tbody>
+                <tr>
+                    <th>Chairman</th>
+                    <td>Upa C. Lalbiakngura</td>
+                </tr>
+                <tr>
+                    <th>Chairman Elect</th>
+                    <td>Upa F. Thasiama</td>
+                </tr>
+                <tr>
+                    <th>Secretary</th>
+                    <td>Upa R. Laldinsanga</td>
+                </tr>
+                <tr>
+                    <th>Assistant Secretary</th>
+                    <td>Rbt. C. Zonunmawia</td>
+                </tr>
+                <tr>
+                    <th>Treasurer</th>
+                    <td>Upa Thanchungnunga</td>
+                </tr>
+                <tr>
+                    <th>Assistant Treasurer</th>
+                    <td>Rbt. T. Lalrinsanga</td>
+                </tr>
+                <tr>
+                    <th>Bialtu Pastor</th>
+                    <td>Rev. H. Lalremruata</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© BCM ABC | Aizawl North Area Baptist Council</p>
+</footer>
+
+</body>
+</html>
