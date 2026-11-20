@@ -142,9 +142,9 @@ body {
     padding: 24px;
     min-height: 200px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    /*display: flex;
+    flex-direction: row; 
+    align-items: flex-start; */
 
     text-decoration: none;
     color: inherit;
@@ -165,29 +165,19 @@ body {
 
 /* Gallery Icon */
 .gallery-icon {
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 30px;
 
     border-radius: 12px;
-
-    background: linear-gradient(
-        145deg,
-        #F7F2FD,
-        #EDE3FA
-    );
-
+    
     color: #8750A8;
 
-    border: 1px solid #E7D9F5;
-
-    display: flex;
+    display:inline-block;
     align-items: center;
     justify-content: center;
 
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 14px;
-
-    box-shadow: 0 2px 6px rgba(95, 55, 130, 0.06);
 
     transition: all 0.25s ease;
 }
@@ -213,14 +203,14 @@ body {
 /* Card Description */
 .gallery-card p {
     color: #718096;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.5;
-    margin: 0 0 20px;
+    margin: -20px 34px 10px;
 }
 
 /* Explore Text */
 .gallery-explore {
-    margin-top: auto;
+    margin-top: -20px;
 
     color: #64748B;
     font-size: 12px;
@@ -303,7 +293,7 @@ footer p {
     }
 
     .gallery-card {
-        min-height: 180px;
+        min-height: 120px;
     }
 }
 
@@ -325,8 +315,8 @@ footer p {
 
         <div class="header-text">
             <p>AIZAWL NORTH AREA BAPTIST COUNCIL</p>
-            <h1>Photo Gallery</h1>
-            <span>Event photographs</span>
+            <h1>Thlalak Dahna</h1>
+            <span>Inkhawmpui chhunga thlalak te a en theih te</span>
         </div>
 
     </div>
@@ -339,18 +329,42 @@ footer p {
 
     <div class="gallery-grid">
 
+        <!-- INBUATSAIHNA -->
+        <a href="https://moments.sulhnu.com/e/eeC0YPvz?album=3bf27399-d734-4edb-ba14-23d7f30e9bd9&s=m7Dpm6zs"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="gallery-card">
+
+            <div class="gallery-icon" style="display:inline-block;" >
+                <i class="fa-solid fa-images"></i>
+            </div>
+
+            <h5 style="display:inline;">Inkhawmpui Inbuatsaihna</h5>
+            <p style="display:block !important;">AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
+
+    
+
+            <span class="gallery-explore">
+                Click Here
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+
+        </a>
+
+        
+
         <!-- FRIDAY -->
         <a href="https://moments.sulhnu.com/e/eeC0YPvz?album=25741c52-7bc1-483e-9921-c6b9d3b39ed0&s=UGVfECRQ"
            target="_blank"
            rel="noopener noreferrer"
            class="gallery-card">
 
-            <div class="gallery-icon" >
+            <div class="gallery-icon" style="display:inline-block;" >
                 <i class="fa-solid fa-images"></i>
             </div>
 
-            <h4 style="display:inline;">November ni 20, 2026 (Zirtawpni Zan)</h4>
-            <p>AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
+            <h5 style="display:inline;">November ni 20, 2026 (Zirtawpni Zan)</h5>
+            <p style="display:block !important;">AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
 
     
 
@@ -366,11 +380,11 @@ footer p {
            rel="noopener noreferrer"
            class="gallery-card">
 
-            <div class="gallery-icon">
+            <div class="gallery-icon" style="display:inline-block;"  >
                 <i class="fa-solid fa-images"></i>
             </div>
 
-              <h4 style="display:inline;">November ni 21, 2026 (Inrinni Rorel)</h4>
+              <h5 style="display:inline;">November ni 21, 2026 (Inrinni Rorel)</h5>
             <p>AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
 
     
@@ -395,7 +409,7 @@ footer p {
                 <i class="fa-solid fa-images"></i>
             </div>
 
-              <h4 style="display:inline;">November ni 21, 2026 (Inrinni Zan)</h4>
+              <h5 style="display:inline;">November ni 21, 2026 (Inrinni Zan)</h5>
             <p>AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
 
     
@@ -419,7 +433,7 @@ footer p {
                 <i class="fa-solid fa-images"></i>
             </div>
 
-              <h4 style="display:inline;">November ni 22, 2026 (Pathianni Chhun)</h4>
+              <h5 style="display:inline;">November ni 22, 2026 (Pathianni Chhun)</h5>
             <p>AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
 
     
@@ -443,8 +457,8 @@ footer p {
                 <i class="fa-solid fa-images"></i>
             </div>
 
-              <h4 style="display:inline;">November ni 22, 2026 Sacrament Inkhawm (Pathianni Chawhnu)</h4>
-            <p>AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
+              <h5 style="position: relative; top:-60px; left: 35px;">November ni 22, 2026 Sacrament Inkhawm (Pathianni Chawhnu)</h5>
+            <p style="margin-top: -75px;">AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
 
     
 
@@ -467,7 +481,7 @@ footer p {
                 <i class="fa-solid fa-images"></i>
             </div>
 
-              <h4 style="display:inline;">November ni 22, 2026 (Pathianni Zan)</h4>
+              <h5 style="display:inline;">November ni 22, 2026 (Pathianni Zan)</h5>
             <p>AIZAWL NORTH ABC INKHAWMPUI VAWI 18-NA</p>
 
     
